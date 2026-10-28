@@ -1,0 +1,17 @@
+{
+  "name": "nyx-lib-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "new-script": "node scripts/new-script.mjs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.0"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true
+  }
+}

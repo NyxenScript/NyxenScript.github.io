@@ -1,0 +1,10 @@
+{
+  "title": "__NAME__",
+  "tagline": "One sentence that explains what __NAME__ does.",
+  "sidebar": [
+    { "text": "Getting started", "items": [
+      { "text": "What is __NAME__?", "link": "/guide/what-is-it" },
+      { "text": "Installation", "link": "/guide/installation" }
+    ]}
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "title": "nyx_lib",
+  "tagline": "Modern shadcn/ui based UI library for FiveM: dialogs, forms, menus, notifications and a server-wide theme.",
+  "sidebar": [
+    { "text": "Getting started", "items": [
+      { "text": "What is nyx_lib?", "link": "/guide/what-is-nyx-lib" },
+      { "text": "Installation", "link": "/guide/installation" },
+      { "text": "Quick start", "link": "/guide/quick-start" },
+      { "text": "Troubleshooting", "link": "/guide/troubleshooting" },
+      { "text": "Glossary", "link": "/guide/glossary" }
+    ]},
+    { "text": "Ready-made functions (client)", "items": [
+      { "text": "alertDialog", "link": "/client/alert-dialog" },
+      { "text": "inputDialog", "link": "/client/input-dialog" },
+      { "text": "showContext", "link": "/client/show-context" },
+      { "text": "notify", "link": "/client/notify" },
+      { "text": "showTextUI / hideTextUI", "link": "/client/text-ui" },
+      { "text": "progressBar", "link": "/client/progress-bar" }
+    ]},
+    { "text": "Build your own UI", "items": [
+      { "text": "Component builders", "link": "/ui/builders" },
+      { "text": "show / hide / update", "link": "/ui/show-hide-update" },
+      { "text": "Events and inputs", "link": "/ui/events-and-inputs" },
+      { "text": "Raw tree format", "link": "/ui/raw-tree" },
+      { "text": "Using Tailwind classes", "link": "/ui/tailwind-classes" }
+    ]},
+    { "text": "Server", "items": [
+      { "text": "notify", "link": "/server/notify" },
+      { "text": "SetTheme", "link": "/server/set-theme" },
+      { "text": "GetTheme", "link": "/server/get-theme" }
+    ]},
+    { "text": "Theming", "items": [
+      { "text": "How theming works", "link": "/theming/how-it-works" },
+      { "text": "Admin panel and commands", "link": "/theming/admin-panel" },
+      { "text": "Adding presets", "link": "/theming/adding-presets" },
+      { "text": "Changing style or icons", "link": "/theming/style-and-icons" }
+    ]},
+    { "text": "Reference", "items": [
+      { "text": "config.lua", "link": "/reference/config" },
+      { "text": "Exports", "link": "/reference/exports" },
+      { "text": "Events", "link": "/reference/events" },
+      { "text": "Commands", "link": "/reference/commands" },
+      { "text": "Permissions (ACE)", "link": "/reference/permissions" },
+      { "text": "File structure", "link": "/reference/file-structure" }
+    ]}
+  ]
+}
