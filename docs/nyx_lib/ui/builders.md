@@ -2,6 +2,8 @@
 
 When the ready-made functions are not enough, you can build any window from shadcn components. Every component is available as a function on `nyx`, with the **same name as the shadcn component**.
 
+This page covers the `nyx.` form (needs `shared_script '@nyx_lib/init.lua'`). If you prefer plain exports, or write in JavaScript or C#, the same components are available as `exports.nyx_lib:Button(...)`. See [Component exports](/nyx_lib/ui/component-exports).
+
 ```lua
 nyx.Button(...)
 nyx.Dialog(...)
@@ -42,7 +44,9 @@ end
 
 ## Which names can I use?
 
-Any shadcn component that was installed with `npx shadcn@latest add --all`. They are the capitalised names exported in `web/src/components/ui`, for example `Button`, `Dialog`, `DialogContent`, `Select`, `SelectItem`, `Tabs`, `Progress`, `Label`, `Input`.
+Any shadcn component that was installed with `npx shadcn@latest add --all`. They are the capitalised names exported in `web/src/components/ui`, for example `Button`, `Dialog`, `DialogContent`, `Select`, `SelectItem`, `Tabs`, `Progress`, `Label`, `Input`. The shipped build has **369** of them. The full list is in `client/component_list.lua`.
+
+A component you added later with `npx shadcn@latest add <name>` works as a builder after `npm run build`. The builders are created on demand, so no Lua list has to be updated for the `nyx.` form.
 
 **Lowercase names are plain HTML tags**, such as `nyx.div`, `nyx.p` and `nyx.span`. They are useful for layout:
 
@@ -62,6 +66,10 @@ Props are passed to the shadcn component as they are. For example `variant = 'ou
 
 Only plain data can be sent: text, numbers, booleans and tables. **Do not put Lua functions in props.** To react to clicks and changes, use [`nyx.emit`](/nyx_lib/ui/events-and-inputs).
 
+### Props that have a `type` key
+
+Some props are called `type` too, for example `type = 'number'` on an `Input`. nyx_lib can tell these apart from a node: a table is treated as props when it contains any key other than `type`, `props` and `children`, and a table with only `type = 'text'` (or another HTML input type such as `number`, `password`, `checkbox`) is treated as props, not as a node. So `nyx.Input({ type = 'number', min = 0 })` and `nyx.Input({ type = 'password' })` both work as you would expect.
+
 If you use `className`, the Tailwind classes must be registered. See [Using Tailwind classes](/nyx_lib/ui/tailwind-classes).
 
 ## Helper functions on `nyx`
@@ -72,3 +80,5 @@ If you use `className`, the Tailwind classes must be registered. See [Using Tail
 | `nyx.bind(name, kind, default)` | Remembers what the player typed or chose. [Details](/nyx_lib/ui/events-and-inputs) |
 | `nyx.show`, `nyx.hide`, `nyx.update` | Open, close and change windows. [Details](/nyx_lib/ui/show-hide-update) |
 | `nyx.getTheme()` | Returns the current theme. |
+
+The ready-made functions (`nyx.alertDialog`, `nyx.inputDialog`, `nyx.showContext`, `nyx.notify`, `nyx.showTextUI`, `nyx.hideTextUI`, `nyx.progressBar`) are also on `nyx`. See [Exports](/nyx_lib/reference/exports) for the full list.

@@ -64,7 +64,27 @@ Add `ensure hello_nyx` to `server.cfg` (after `ensure nyx_lib`), restart, join, 
 `alertDialog`, `inputDialog`, `showContext`, `progressBar` and `show(..., true)` wait for the player. They must run inside a command handler, an event handler or a `CreateThread`. They work in all of those. They cannot run in a place where waiting is not allowed.
 :::
 
+## The same thing without `init.lua`
+
+You do not have to add `init.lua`. Every function is also a normal export, so this works in any resource, including JavaScript and C# ones. Remove the `shared_script` line from the manifest and write:
+
+```lua
+RegisterCommand('hello', function()
+  local answer = exports.nyx_lib:alertDialog({
+    header = 'Say hello?',
+    content = 'This is a test of nyx_lib.',
+    cancel = true,
+  })
+  if answer ~= 'confirm' then return end
+
+  exports.nyx_lib:notify({ title = 'Hello!', type = 'success' })
+end, false)
+```
+
+The same goes for custom windows. Each shadcn component is an export, for example `exports.nyx_lib:Button(...)`. See [Component exports](/nyx_lib/ui/component-exports).
+
 ## Where to go next
 
 - [All ready-made functions](/nyx_lib/client/alert-dialog)
 - [Build your own window](/nyx_lib/ui/builders)
+- [Every export in one table](/nyx_lib/reference/exports)

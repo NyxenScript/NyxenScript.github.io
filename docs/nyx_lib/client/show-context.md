@@ -4,6 +4,8 @@ Shows a menu of clickable choices and waits for the player to pick one.
 
 ```lua
 local index = nyx.showContext(ctx)
+-- or, without init.lua:
+local index = exports.nyx_lib:showContext(ctx)
 ```
 
 ## Parameters
@@ -51,5 +53,6 @@ end
 ## Good to know
 
 - `onSelect` runs inside a protected call, so an error inside it will not crash your script.
+- Instead of `onSelect` you can simply use the returned index, for example `if choice == 2 then ... end`. Both ways can be mixed.
 - Your code waits until the player chooses.
 - Built with the shadcn components `Dialog` and `Button`.

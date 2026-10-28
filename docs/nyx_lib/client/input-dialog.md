@@ -4,6 +4,8 @@ Shows a form with one or more fields and waits for the player to fill it in.
 
 ```lua
 local values = nyx.inputDialog(heading, rows)
+-- or, without init.lua:
+local values = exports.nyx_lib:inputDialog(heading, rows)
 ```
 
 ## Parameters
@@ -70,5 +72,8 @@ If the player never touches a text, number or select field, its value may be `ni
 :::
 
 - For `checkbox` and `switch`, `required = true` means the player must turn it **on**.
-- The button texts **Batal** and **Simpan** are fixed in `client/components.lua`.
+- The button texts **Batal** and **Simpan**, the required-field message and the select placeholder **Pilih** are fixed in `client/components.lua`. Edit that file to translate them (restart `nyx_lib`, no rebuild).
+- For `select`, `default` must be the `value` of one of the options.
+- For `slider`, the starting value is `default`, then `min`, then `0`.
+- For `number`, an empty box returns `nil`.
 - A third argument (`options`) is accepted but currently unused.

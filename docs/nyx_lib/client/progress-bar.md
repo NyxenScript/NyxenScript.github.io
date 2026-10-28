@@ -4,6 +4,8 @@ Shows a progress bar at the bottom of the screen, and waits until it is finished
 
 ```lua
 local finished = nyx.progressBar(data)
+-- or, without init.lua:
+local finished = exports.nyx_lib:progressBar(data)
 ```
 
 ## Parameters

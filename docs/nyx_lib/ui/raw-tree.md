@@ -36,5 +36,7 @@ local r = exports.nyx_lib:Show({
 ## Notes
 
 - The second argument of `Show` is `wait`. The third is `keepFocus`. See [show / hide / update](/nyx_lib/ui/show-hide-update).
-- The tree format is **stable**. Scripts written against it keep working when you change the theme or preset.
+- The tree format is **stable**. Scripts written against it keep working when you change the theme.
 - `children` can be a single text string or a list. A list may mix text and nodes.
+- Numbers are shown as text. Empty (`nil`) entries are not allowed inside a list you write by hand. The builders skip them for you.
+- Tag names that start with a lowercase letter (`div`, `p`, `span`) are plain HTML tags. A name that is not a known component falls back to a plain HTML tag, so a typo shows nothing useful instead of an error.

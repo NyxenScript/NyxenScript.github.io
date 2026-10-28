@@ -32,6 +32,8 @@ To fix that, list every class you use in `web/src/nyx/classes.ts`, then rebuild.
 
 ::: tip
 The classes used by nyx_lib's own functions are already listed in that file. You only need to add new ones.
+
+Tailwind scans every file under `web/src`, so a class that already appears somewhere in the shadcn components works without being added. Adding it to `classes.ts` is the safe way to be sure.
 :::
 
 ## Prefer theme colours

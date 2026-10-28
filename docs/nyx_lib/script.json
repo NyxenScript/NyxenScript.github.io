@@ -19,6 +19,7 @@
     ]},
     { "text": "Build your own UI", "items": [
       { "text": "Component builders", "link": "/ui/builders" },
+      { "text": "Component exports", "link": "/ui/component-exports" },
       { "text": "show / hide / update", "link": "/ui/show-hide-update" },
       { "text": "Events and inputs", "link": "/ui/events-and-inputs" },
       { "text": "Raw tree format", "link": "/ui/raw-tree" },
@@ -27,13 +28,15 @@
     { "text": "Server", "items": [
       { "text": "notify", "link": "/server/notify" },
       { "text": "SetTheme", "link": "/server/set-theme" },
-      { "text": "GetTheme", "link": "/server/get-theme" }
+      { "text": "ResetTheme", "link": "/server/reset-theme" },
+      { "text": "GetTheme", "link": "/server/get-theme" },
+      { "text": "GetOptions", "link": "/server/get-options" }
     ]},
     { "text": "Theming", "items": [
       { "text": "How theming works", "link": "/theming/how-it-works" },
       { "text": "Admin panel and commands", "link": "/theming/admin-panel" },
-      { "text": "Adding presets", "link": "/theming/adding-presets" },
-      { "text": "Changing style or icons", "link": "/theming/style-and-icons" }
+      { "text": "Adding theme options", "link": "/theming/adding-options" },
+      { "text": "Changing style, icons or menu", "link": "/theming/style-and-icons" }
     ]},
     { "text": "Reference", "items": [
       { "text": "config.lua", "link": "/reference/config" },
@@ -41,7 +44,10 @@
       { "text": "Events", "link": "/reference/events" },
       { "text": "Commands", "link": "/reference/commands" },
       { "text": "Permissions (ACE)", "link": "/reference/permissions" },
-      { "text": "File structure", "link": "/reference/file-structure" }
+      { "text": "Theme files", "link": "/reference/theme-files" },
+      { "text": "npm scripts", "link": "/reference/npm-scripts" },
+      { "text": "File structure", "link": "/reference/file-structure" },
+      { "text": "Changelog and migration", "link": "/reference/changelog" }
     ]}
   ]
 }

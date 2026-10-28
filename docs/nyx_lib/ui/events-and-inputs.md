@@ -2,6 +2,10 @@
 
 A custom window needs to tell your Lua code what the player did. nyx_lib has two small tools for this: **emit** (for clicks and changes) and **bind** (for remembering typed values).
 
+::: tip Using exports instead of `nyx.`?
+The same two helpers exist as exports: `exports.nyx_lib:emit(name)` and `exports.nyx_lib:bind(name, kind, default)`. See [Component exports](/nyx_lib/ui/component-exports).
+:::
+
 ## nyx.emit: "tell me when this happens"
 
 ```lua

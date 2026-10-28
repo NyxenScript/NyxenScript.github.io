@@ -4,6 +4,8 @@ Shows a confirmation pop-up and waits for the player to answer. Use it for "Are 
 
 ```lua
 local result = nyx.alertDialog(data)
+-- or, without init.lua:
+local result = exports.nyx_lib:alertDialog(data)
 ```
 
 ## Parameters
@@ -41,5 +43,6 @@ end
 ## Good to know
 
 - Your code **pauses** until the player answers. See the note in [Quick start](/nyx_lib/guide/quick-start).
+- `labels` replaces the default button texts. The default confirm text is `OK` and the default cancel text is `Batal` (Indonesian for "Cancel"), so set `labels.cancel` if your players do not read Indonesian.
 - The window closes by itself after the answer.
 - Built with the shadcn components `AlertDialog`, `AlertDialogContent`, `AlertDialogHeader`, `AlertDialogTitle`, `AlertDialogDescription`, `AlertDialogFooter` and `Button`.

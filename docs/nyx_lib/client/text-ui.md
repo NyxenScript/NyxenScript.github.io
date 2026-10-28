@@ -5,6 +5,9 @@ Shows a small hint box on screen, such as "[E] Open door", until you hide it.
 ```lua
 nyx.showTextUI(text, opts)
 nyx.hideTextUI()
+-- or, without init.lua:
+exports.nyx_lib:showTextUI(text, opts)
+exports.nyx_lib:hideTextUI()
 ```
 
 ## Parameters
